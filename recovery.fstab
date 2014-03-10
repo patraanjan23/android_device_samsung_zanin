@@ -4,5 +4,11 @@
 /cache      ext4        /dev/block/platform/sdhci.1/by-name/CSC
 /recovery   emmc        /dev/block/platform/sdhci.1/by-name/RECOVERY
 /efs        ext4        /dev/block/platform/sdhci.1/by-name/efs                            
-/sdcard     vfat        /dev/block/mmcblk1p1                             
 /preload    ext4        /dev/block/platform/sdhci.1/by-name/HIDDEN
+/sdcard     datamedia   /dev/null
+/external_sd      vfat        /dev/block/mmcblk1p1 /dev/block/mmcblk1
+/sd-ext     ext4        /dev/block/mmcblk1p2
+
+
+
+#/sdcard    vfat        /dev/block/mmcblk1p1  /dev/block/mmcblk1
