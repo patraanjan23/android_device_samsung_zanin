@@ -39,6 +39,31 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
 #########################################################################
+HAVE_HTC_AUDIO_DRIVER := true
+BOARD_USES_GENERIC_AUDIO := true
+# Set /system/bin/sh to ash, not mksh, to make sure we can switch back.
+TARGET_SHELL := ash
+
+# Enable dex-preoptimization to speed up the first boot sequence
+# of an SDK AVD. Note that this operation only works on Linux for now
+ifeq ($(HOST_OS),linux)
+WITH_DEXPREOPT := true
+endif
+
+# Build OpenGLES emulation guest and host libraries
+BUILD_EMULATOR_OPENGL := true
+
+# Build and enable the OpenGL ES View renderer. When running on the emulator,
+# the GLES renderer disables itself if host GL acceleration isn't available.
+USE_OPENGL_RENDERER := true
+
+BOARD_USES_ALSA_AUDIO := true
+BRCM_ALSA_LIB_DIR=device/samsung/bcm_common/alsa-lib
+
+# Enable Bluetooth 
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_BCM := true
+
 
 #twrp
 #DEVICE_RESOLUTION := 240x240
