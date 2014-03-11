@@ -36,7 +36,7 @@ BOARD_FLASH_BLOCK_SIZE := 1024  #131072
 TARGET_PREBUILT_KERNEL := device/samsung/zanin/kernel
 #########################################################################
 BOARD_HAS_NO_SELECT_BUTTON := true
-#BOARD_HAS_SDCARD_INTERNAL := true
+BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
 #########################################################################
 
