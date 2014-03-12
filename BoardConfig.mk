@@ -64,7 +64,6 @@ BRCM_ALSA_LIB_DIR=device/samsung/bcm_common/alsa-lib
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
-
 #twrp
 #DEVICE_RESOLUTION := 240x240
 #RECOVERY_GRAPHICS_USE_LINELENGTH := true
