@@ -31,7 +31,7 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 939524096
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 2236070912
 BOARD_CACHEIMAGE_PARTITION_SIZE := 536870912
-BOARD_FLASH_BLOCK_SIZE := 1024  #131072
+BOARD_FLASH_BLOCK_SIZE := 131072
 #########################################################################
 TARGET_PREBUILT_KERNEL := device/samsung/zanin/kernel
 #########################################################################
