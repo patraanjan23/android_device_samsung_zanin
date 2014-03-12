@@ -34,6 +34,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 536870912
 BOARD_FLASH_BLOCK_SIZE := 131072
 #########################################################################
 TARGET_PREBUILT_KERNEL := device/samsung/zanin/kernel
+TARGET_USERIMAGES_USE_EXT4 := true
 #########################################################################
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_SDCARD_INTERNAL := true
