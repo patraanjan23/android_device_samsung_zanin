@@ -1,5 +1,5 @@
 VENDOR=samsung
-device=zanin
+DEVICE=zanin
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
