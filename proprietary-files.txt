@@ -365,6 +365,7 @@ lib/bluez-plugin/audio.so
 lib/bluez-plugin/bluetooth-health.so
 lib/bluez-plugin/input.so
 lib/bluez-plugin/network.so
+lib/modules/dhd.ko
 cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 etc/wifi/bcmdhd_apsta.bin_b2

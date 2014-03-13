@@ -35,13 +35,22 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 #########################################################################
 TARGET_PREBUILT_KERNEL := device/samsung/zanin/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_HAS_SDCARD_INTERNAL:= true
 #########################################################################
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_SDCARD_INTERNAL := true
 BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
+#BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/samsung/tassve/recovery/recovery_ui.c
 #########################################################################
 HAVE_HTC_AUDIO_DRIVER := true
 BOARD_USES_GENERIC_AUDIO := true
+#########################################################################
+BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
+WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
+WIFI_DRIVER_MODULE_NAME := "dhd"
+
+
+
 # Set /system/bin/sh to ash, not mksh, to make sure we can switch back.
 TARGET_SHELL := ash
 
@@ -59,11 +68,12 @@ BUILD_EMULATOR_OPENGL := true
 USE_OPENGL_RENDERER := true
 
 BOARD_USES_ALSA_AUDIO := true
-BRCM_ALSA_LIB_DIR=device/samsung/bcm_common/alsa-lib
+BRCM_ALSA_LIB_DIR:= device/samsung/bcm_common/alsa-lib
 
 # Enable Bluetooth 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
+
 
 #twrp
 #DEVICE_RESOLUTION := 240x240
