@@ -45,7 +45,7 @@ BOARD_CUSTOM_GRAPHICS:= ../../../device/samsung/zanin/recovery/graphics.c
 HAVE_HTC_AUDIO_DRIVER := true
 BOARD_USES_GENERIC_AUDIO := true
 #########################################################################
-BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
+#BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
@@ -73,6 +73,14 @@ BRCM_ALSA_LIB_DIR:= device/samsung/bcm_common/alsa-lib
 # Enable Bluetooth 
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
+
+#adb
+ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.allow.mock.location=0
+ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
+ADDITIONAL_DEFAULT_PROPERTIES += persist.service.adb.enable=1
+ADDITIONAL_DEFAULT_PROPERTIES += ro.config.sec_storage=1
+ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
 
 
 #twrp
