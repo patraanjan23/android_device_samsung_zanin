@@ -1,4 +1,5 @@
 /boot	    emmc        /dev/block/platform/sdhci.1/by-name/KERNEL
+/radio    emmc        /dev/block/platform/sdhci.1/by-name/MODEM
 /system     ext4        /dev/block/platform/sdhci.1/by-name/system
 /data       ext4        /dev/block/platform/sdhci.1/by-name/userdata
 /cache      ext4        /dev/block/platform/sdhci.1/by-name/CSC
