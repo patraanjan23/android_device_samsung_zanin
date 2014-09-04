@@ -57,7 +57,7 @@ BOARD_CHARGER_RES := device/samsung/zanin/res/images/charger
 
 #egl
 BUILD_EMULATOR_OPENGL := true
-#BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
+BOARD_EGL_CFG := device/samsung/zanin/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Set /system/bin/sh to ash, not mksh, to make sure we can switch back.
@@ -65,9 +65,9 @@ USE_OPENGL_RENDERER := true
 
 # Enable dex-preoptimization to speed up the first boot sequence
 # of an SDK AVD. Note that this operation only works on Linux for now
-#ifeq ($(HOST_OS),linux)
-#WITH_DEXPREOPT := true
-#endif
+ifeq ($(HOST_OS),linux)
+WITH_DEXPREOPT := true
+endif
 
 #audio
 BOARD_USES_ALSA_AUDIO := true
