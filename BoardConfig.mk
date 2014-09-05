@@ -30,9 +30,17 @@ TARGET_PREBUILT_KERNEL := device/samsung/zanin/kernel
 TARGET_USERIMAGES_USE_EXT4 := true
 
 #wifi
-BOARD_WLAN_DEVICE                := bcmdhd
+#BOARD_WLAN_DEVICE                := bcmdhd
 #WPA_SUPPLICANT_VERSION           := VER_0_8_X
 #BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+
+BOARD_WLAN_DEVICE := bcmdhd
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_${BOARD_WLAN_DEVICE}
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_${BOARD_WLAN_DEVICE}
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+
 WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_STA          := "/system/etc/wifi/bcmdhd_sta.bin"
@@ -74,5 +82,5 @@ BOARD_USES_ALSA_AUDIO := true
 BRCM_ALSA_LIB_DIR=device/samsung/bcm_common/alsa-lib
 
 #LUN file
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/dwc_otg/gadget/lun"
-BOARD_UMS_LUNFILE := "/sys/devices/platform/dwc_otg/lun0/file"
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/dwc_otg/gadget/lun"
+#BOARD_UMS_LUNFILE := "/sys/devices/platform/dwc_otg/lun0/file"
