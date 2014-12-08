@@ -28,16 +28,13 @@ endif
 #boot
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/samsung/zanin/init/init.rc:root/init.rc \
-    device/samsung/zanin/init/fstab.rhea_ss_zanin:root/fstab.rhea_ss_zanin \
-    device/samsung/zanin/init/init.bcm2165x.usb.rc:root/init.bcm2165x.usb.rc \
+    device/samsung/zanin/init/fstab.rhea:root/fstab.rhea \
+    device/samsung/zanin/init/init.rhea.usb.rc:root/init.rhea.usb.rc \
     device/samsung/zanin/init/init.bt.rc:root/init.bt.rc \
     device/samsung/zanin/init/init.log.rc:root/init.log.rc\
-    device/samsung/zanin/init/init.rhea_ss_zanin.rc:root/init.rhea_ss_zanin.rc \
-    device/samsung/zanin/init/init.zram.sh:root/init.zram.sh \
+    device/samsung/zanin/init/init.rhea.rc:root/init.rhea.rc \
     device/samsung/zanin/init/lpm.rc:root/lpm.rc \
-    device/samsung/zanin/init/sec_param.ko:root/sec_param.ko \
-    device/samsung/zanin/init/ueventd.rhea_ss_zanin.rc:root/ueventd.rhea_ss_zanin.rc
+    device/samsung/zanin/init/ueventd.rhea.rc:root/ueventd.rhea.rc
 
 
 $(call inherit-product, build/target/product/full.mk)
